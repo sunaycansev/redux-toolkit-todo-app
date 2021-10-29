@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loading } from "./Loading";
 
+import { selectFilteredTodos } from "../redux/todos/todosSlice";
 import {
-  selectFilteredTodos,
-  getTodosAsync,
   toggleTodoAsync,
+  getTodosAsync,
   deleteTodoAsync,
-} from "../redux/todos/todosSlice";
+} from "../redux/todos/todosServices";
 import Error from "./Error";
 
 export default function TodoList() {
